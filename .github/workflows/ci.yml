@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         uses: py-actions/py-dependency-install@v4
       - name: Test with pytest
-        run: pytest
+        run: pytest.py
