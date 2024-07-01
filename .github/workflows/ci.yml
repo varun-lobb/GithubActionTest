@@ -15,4 +15,6 @@ jobs:
       - name: Install dependencies
         uses: py-actions/py-dependency-install@v4
       - name: Test with pytest
-        run: pytest.py
+        run: | 
+           pip install pytest pytest-cov
+           pytest test_session.py
