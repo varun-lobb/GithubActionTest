@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up python 3.6
+      - name: Set up python 3.12.4
         uses: actions/setup-python@v1
         with:
-          python-version: 3.12.4 
+          python-version: 3.12.4
+      - name: Install dependencies
+        uses: py-actions/py-dependency-install@v4
       - name: Test with pytest
         run: pytest
